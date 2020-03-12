@@ -1,12 +1,12 @@
-## OktaCreateUserAPI
-# Utility Usage
+# OktaCreateUserAPI
+## Utility Usage
 This utility is built as an API with Lambda integration using API gateway. It contains validation of the provided token using authorizer. The main functionality of this utility is to create user in a provided Okta tenant. 
-# Initial Setup
+## Initial Setup
 * Install Java 8 on the machine
 * Install Eclipse (use the latest version)
 * Import the project as Maven project
 * Build the jar using maven build
-# Lambda Function
+## Lambda Function
 1. Login to AWS console. Create a new Lambda function as specified in the screenshot below. For execution role, we can either create a new role or use an existing role. 
 Note: Refer to https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html for detailed steps on creating new Lambda function
 ![](images/Create_LambdaFunction.png)
@@ -29,7 +29,7 @@ Note: Refer to https://docs.aws.amazon.com/lambda/latest/dg/getting-started-crea
         - Issuer_URL – Used to verify the Okta token provided (https://{url}/oauth2/default, here url is Okta tenant url)
      ![](images/EnvironmentVar2.png)
      
-# API Gateway
+## API Gateway
   1. Create a new API by providing below details
       - Login to AWS console, select API Gateway under Services
         ![](images/APIGateway1.png)
@@ -127,7 +127,7 @@ Note: Refer to https://docs.aws.amazon.com/lambda/latest/dg/getting-started-crea
         ![](images/APIUrl.png)
         
 
-# Invoking the API 
+## Invoking the API 
   
   1. We invoke the API through Postman. Click on a new request, select Post and in the url specify the API url obtained in the previous step
   ![](images/InvokeAPI.png)
